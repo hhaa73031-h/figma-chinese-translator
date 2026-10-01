@@ -1,4 +1,4 @@
-# Python cache
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -7,7 +7,22 @@ __pycache__/
 build/
 *.spec.bak
 
-# Temp logs
+# PyCharm / VS Code / Editors
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Temp logs and caches
 *.log
 *.tmp
 temp/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+# Web 控制台 (web_server.py) 使用 Python 原生标准库，无外部三方依赖。
+# 若需运行原生桌面 UI (main.py)，请安装：
+customtkinter>=5.2.0
+
+# 可选：打包 exe 所需工具
+pyinstaller>=6.0.0
