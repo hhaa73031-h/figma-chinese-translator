@@ -77,6 +77,7 @@ def apply_localization(
             "translations.json",
             "menu_dict.json",
             "zh-CN.json",
+            "dynamic_learned.json",
         ]
 
         for fname in inject_files:

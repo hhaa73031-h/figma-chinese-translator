@@ -1,20 +1,19 @@
 /**
- * Figma Electron 主进程注入挂钩
- * 核心职责：
- * 0. 中和 bindings.node 原生反篡改模块触发的 10ms delayedExit 自毁逻辑（彻底解决窗口无法唤醒）
- * 1. 递归汉化 Windows 原生应用顶部菜单栏与右键菜单 (4000+ 词条全量覆盖)
- * 2. 监听所有创建的 WebContents 并针对 figma.com 注入 Edge 级实时动态汉化引擎
- * 3. 增强窗口唤醒与激活守护，防止窗口最小化或隐藏残留
+ * Figma Electron 主进程深度注入挂钩
+ * 核心功能：
+ * 1. 中和 bindings.node 原生反篡改模块触发的 10ms delayedExit 自毁逻辑（彻底解决窗口唤醒与闪退问题）
+ * 2. 递归汉化 Windows 原生应用顶部菜单栏与右键菜单 (4000+ 原生词条全量覆盖)
+ * 3. 提供 IPC 实时动态翻译后端接口 (无 CORS 限制，双引擎极速免 Key 实时翻译，自动持久化学习)
+ * 4. 窗口唤醒与前台激活守护
  */
 
-// 0. 核心修复：中和 bindings.node 原生反篡改自毁定时器
+// 1. 中和 bindings.node 原生反篡改自毁定时器
 (function() {
   try {
     const origSetTimeout = global.setTimeout;
     global.setTimeout = function(fn, ms, ...args) {
       if (fn && typeof fn === 'function') {
         const fnStr = fn.toString();
-        // 拦截 bindings.node 中触发的 () => process.exit(0)
         if ((ms <= 500 || !ms) && (fnStr.includes('process.exit(0)') || fnStr.includes('process.exit()') || fnStr.includes('exit(0)'))) {
           return origSetTimeout(() => {}, 2147483647);
         }
@@ -24,12 +23,13 @@
   } catch(e) {}
 })();
 
-const { app, Menu, BrowserWindow } = require('electron');
+const { app, Menu, BrowserWindow, ipcMain } = require('electron');
+const https = require('https');
 const path = require('path');
 const fs = require('fs');
 
 try {
-  // 1. 读取原生菜单字典 (全量覆盖)
+  // 2. 读取原生菜单字典
   let menuDict = {};
   const menuDictPath = path.join(__dirname, 'menu_dict.json');
   if (fs.existsSync(menuDictPath)) {
@@ -38,7 +38,7 @@ try {
     } catch (e) {}
   }
 
-  // 递归安全汉化菜单模板
+  // 递归汉化菜单模板
   function translateMenu(template) {
     if (!Array.isArray(template)) return;
     for (let i = 0; i < template.length; i++) {
@@ -57,7 +57,6 @@ try {
     }
   }
 
-  // 劫持 Menu.buildFromTemplate
   if (Menu && Menu.buildFromTemplate) {
     const originalBuildFromTemplate = Menu.buildFromTemplate;
     Menu.buildFromTemplate = function (template) {
@@ -70,7 +69,120 @@ try {
     };
   }
 
-  // 2. 读取全量 4000+ 词典与 Edge 级实时汉化脚本
+  // 3. 异步实时在线翻译引擎（主进程无 CORS 限制，自动学习持久化）
+  const liveCache = new Map();
+  const dynamicDictPath = path.join(__dirname, 'dynamic_learned.json');
+
+  if (fs.existsSync(dynamicDictPath)) {
+    try {
+      const saved = JSON.parse(fs.readFileSync(dynamicDictPath, 'utf8'));
+      if (typeof saved === 'object') {
+        Object.entries(saved).forEach(([k, v]) => liveCache.set(k, v));
+      }
+    } catch (e) {}
+  }
+
+  function persistDynamicDict() {
+    try {
+      const obj = {};
+      for (const [k, v] of liveCache.entries()) {
+        obj[k] = v;
+      }
+      fs.writeFileSync(dynamicDictPath, JSON.stringify(obj, null, 2), 'utf8');
+    } catch (e) {}
+  }
+
+  // 引擎 A: Google GTX 极速免费翻译
+  function fetchGTX(text) {
+    return new Promise((resolve) => {
+      const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=zh-CN&dt=t&q=' + encodeURIComponent(text);
+      const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 3500 }, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          try {
+            const parsed = JSON.parse(data);
+            const result = parsed[0].map(c => c[0]).join('');
+            if (result && result.trim() && result !== text) {
+              resolve(result.trim());
+              return;
+            }
+          } catch (e) {}
+          resolve(null);
+        });
+      });
+      req.on('error', () => resolve(null));
+      req.on('timeout', () => { req.destroy(); resolve(null); });
+    });
+  }
+
+  // 引擎 B: MyMemory 备用接口
+  function fetchMyMemory(text) {
+    return new Promise((resolve) => {
+      const url = 'https://api.mymemory.translated.net/get?q=' + encodeURIComponent(text) + '&langpair=en|zh-CN';
+      const req = https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, timeout: 3500 }, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          try {
+            const parsed = JSON.parse(data);
+            const result = parsed.responseData && parsed.responseData.translatedText;
+            if (result && result.trim() && !result.includes('MYMEMORY') && result !== text) {
+              resolve(result.trim());
+              return;
+            }
+          } catch (e) {}
+          resolve(null);
+        });
+      });
+      req.on('error', () => resolve(null));
+      req.on('timeout', () => { req.destroy(); resolve(null); });
+    });
+  }
+
+  async function translateSingle(text) {
+    if (liveCache.has(text)) return liveCache.get(text);
+    let res = await fetchGTX(text);
+    if (!res) {
+      res = await fetchMyMemory(text);
+    }
+    if (res) {
+      liveCache.set(text, res);
+      return res;
+    }
+    return null;
+  }
+
+  if (ipcMain && !ipcMain.__figma_translator_registered__) {
+    ipcMain.__figma_translator_registered__ = true;
+    ipcMain.handle('figma-live-translate-batch', async (event, texts) => {
+      if (!Array.isArray(texts) || texts.length === 0) return {};
+      const results = {};
+      let newlyLearned = 0;
+
+      for (let i = 0; i < Math.min(texts.length, 30); i++) {
+        const t = texts[i];
+        if (!t || typeof t !== 'string') continue;
+        const trimmed = t.trim();
+        if (liveCache.has(trimmed)) {
+          results[trimmed] = liveCache.get(trimmed);
+        } else {
+          const trans = await translateSingle(trimmed);
+          if (trans) {
+            results[trimmed] = trans;
+            newlyLearned++;
+          }
+        }
+      }
+
+      if (newlyLearned > 0) {
+        persistDynamicDict();
+      }
+      return results;
+    });
+  }
+
+  // 4. 读取全量 4300+ 词典与渲染脚本
   let translatorScript = '';
   const translatorPath = path.join(__dirname, 'realtime_translator.js');
   const translationsPath = path.join(__dirname, 'translations.json');
@@ -91,7 +203,7 @@ try {
     translatorScript = `var __FIGMA_BUILTIN_TRANSLATIONS__ = ${dictContent};\n` + rawScript;
   }
 
-  // 3. 窗口唤醒守护 (解决汉化后窗口无法正常唤醒问题)
+  // 5. 窗口唤醒守护
   function wakeUpWindow(win) {
     try {
       if (win && !win.isDestroyed()) {
@@ -107,7 +219,6 @@ try {
   }
 
   if (app && app.on) {
-    // 当从快捷方式再次启动时，唤醒现有窗口到最前台
     app.on('second-instance', () => {
       setTimeout(() => {
         try {
@@ -119,15 +230,13 @@ try {
       }, 80);
     });
 
-    // 监控窗口创建，确保在加载完毕后若处于未显示状态能够保底唤醒
     app.on('browser-window-created', (event, win) => {
       setTimeout(() => {
         wakeUpWindow(win);
       }, 3000);
     });
 
-    // 4. 精准注入：仅向实际加载网页界面（如 https://www.figma.com）的 WebContents 注入
-    // 绝对避开 file:// (loading_screen.html 和 shell.html)，防止破坏启动动画与 React 挂载
+    // 6. 二级保底注入
     app.on('web-contents-created', (event, contents) => {
       if (!contents) return;
 
@@ -136,7 +245,6 @@ try {
           if (contents.isDestroyed() || !translatorScript) return;
           const url = (contents.getURL ? contents.getURL() : '').toLowerCase();
 
-          // 仅对在线网页/设计文件内容注入
           if (url.startsWith('https://') || url.startsWith('http://') || url.includes('figma.com')) {
             contents.executeJavaScript(translatorScript).catch(() => {});
           }
@@ -149,6 +257,4 @@ try {
       contents.on('did-navigate-in-page', runInjection);
     });
   }
-} catch (err) {
-  // 静默保护
-}
+} catch (err) {}
