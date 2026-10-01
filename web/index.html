@@ -9,6 +9,7 @@
       --bg-main: #0c0e12;
       --bg-card: #13171f;
       --bg-card-hover: #181d26;
+      --bg-card-alt: #161b24;
       --bg-terminal: #08090c;
       --border-subtle: #232833;
       --border-highlight: #3b4252;
@@ -59,7 +60,7 @@
 
     .container {
       width: 100%;
-      max-width: 860px;
+      max-width: 900px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -149,7 +150,7 @@
       border: 1px solid var(--border-subtle);
       padding: 20px 24px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
     }
 
@@ -178,40 +179,39 @@
     }
 
     .tag {
-      padding: 2px 8px;
       font-size: 11px;
-      font-weight: 600;
       font-family: "JetBrains Mono", Consolas, monospace;
-      border: 1px solid transparent;
-      display: inline-flex;
-      align-items: center;
+      padding: 3px 8px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .tag-emerald {
       background: var(--accent-emerald-bg);
       color: var(--accent-emerald);
-      border-color: rgba(16, 185, 129, 0.3);
+      border: 1px solid rgba(16, 185, 129, 0.25);
     }
 
     .tag-amber {
       background: var(--accent-amber-bg);
       color: var(--accent-amber);
-      border-color: rgba(217, 119, 6, 0.3);
-    }
-
-    .tag-gray {
-      background: rgba(255, 255, 255, 0.05);
-      color: var(--text-secondary);
-      border-color: var(--border-subtle);
+      border: 1px solid rgba(217, 119, 6, 0.25);
     }
 
     .tag-crimson {
       background: var(--accent-crimson-bg);
       color: var(--accent-crimson);
-      border-color: rgba(239, 68, 68, 0.3);
+      border: 1px solid rgba(239, 68, 68, 0.25);
     }
 
-    /* 主操作卡片网格 */
+    .tag-gray {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* 核心操作卡片网格 */
     .action-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -231,8 +231,9 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 18px;
-      transition: border-color 0.2s, background-color 0.2s;
+      gap: 20px;
+      position: relative;
+      transition: border-color 0.2s ease, background 0.2s ease;
     }
 
     .action-card:hover {
@@ -241,12 +242,11 @@
     }
 
     .action-card.primary {
-      border-color: rgba(217, 119, 6, 0.4);
-      background: linear-gradient(180deg, rgba(217, 119, 6, 0.04) 0%, var(--bg-card) 100%);
+      border-left: 3px solid var(--accent-amber);
     }
 
-    .action-card.primary:hover {
-      border-color: var(--accent-amber);
+    .action-card.secondary {
+      border-left: 3px solid var(--text-muted);
     }
 
     .card-header h2 {
@@ -348,74 +348,300 @@
       border: 1px solid var(--border-subtle);
       padding: 12px 18px;
       display: flex;
-      flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
     .tool-group {
       display: flex;
       align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .btn-sm {
-      padding: 7px 13px;
+      padding: 8px 14px;
       font-size: 12px;
       font-weight: 600;
-      font-family: "JetBrains Mono", Consolas, monospace;
-      background: #171b23;
+      background: rgba(255, 255, 255, 0.04);
       border: 1px solid var(--border-subtle);
       color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "JetBrains Mono", Consolas, monospace;
     }
 
     .btn-sm:hover:not(:disabled) {
-      background: #202631;
-      color: var(--text-main);
+      background: rgba(255, 255, 255, 0.08);
       border-color: var(--border-highlight);
+      color: var(--text-main);
     }
 
     .btn-sm.btn-emerald {
-      border-color: rgba(16, 185, 129, 0.4);
+      border-color: rgba(16, 185, 129, 0.3);
       color: var(--accent-emerald);
+      background: var(--accent-emerald-bg);
     }
 
     .btn-sm.btn-emerald:hover:not(:disabled) {
-      background: var(--accent-emerald-bg);
-      border-color: var(--accent-emerald);
+      background: rgba(16, 185, 129, 0.2);
     }
 
     .btn-sm.btn-crimson {
-      border-color: rgba(239, 68, 68, 0.4);
+      border-color: rgba(239, 68, 68, 0.3);
       color: var(--accent-crimson);
+      background: var(--accent-crimson-bg);
     }
 
     .btn-sm.btn-crimson:hover:not(:disabled) {
-      background: var(--accent-crimson-bg);
-      border-color: var(--accent-crimson);
+      background: rgba(239, 68, 68, 0.2);
+    }
+
+    /* 新手小白宝典模块 */
+    .guide-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-header {
+      padding: 16px 20px;
+      background: var(--bg-card-alt);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .guide-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-amber);
+      letter-spacing: 0.02em;
+    }
+
+    .guide-badge {
+      font-size: 11px;
+      padding: 2px 6px;
+      background: var(--accent-amber-bg);
+      color: var(--accent-amber);
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+
+    .guide-nav {
+      display: flex;
+      gap: 8px;
+      padding: 12px 20px;
+      background: rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+    }
+
+    .guide-tab-btn {
+      background: transparent;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .guide-tab-btn.active {
+      background: var(--accent-amber);
+      color: #000;
+      border-color: var(--accent-amber);
+    }
+
+    .guide-tab-btn:hover:not(.active) {
+      border-color: var(--border-highlight);
+      color: var(--text-main);
+    }
+
+    .guide-content {
+      padding: 20px;
+    }
+
+    .guide-panel {
+      display: none;
+    }
+
+    .guide-panel.active {
+      display: block;
+    }
+
+    /* 概念卡片网格 */
+    .concept-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .concept-card {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .concept-card h4 {
+      font-size: 13px;
+      color: var(--accent-amber);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .concept-card p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .concept-card .tip {
+      font-size: 11px;
+      color: var(--accent-emerald);
+      background: var(--accent-emerald-bg);
+      padding: 4px 8px;
+      border-left: 2px solid var(--accent-emerald);
+      margin-top: 4px;
+    }
+
+    /* 快捷键表格 */
+    .shortcut-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .shortcut-table th {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 8px 12px;
+      text-align: left;
+      color: var(--text-muted);
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-weight: 600;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .shortcut-table td {
+      padding: 8px 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text-secondary);
+    }
+
+    .shortcut-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-main);
+    }
+
+    .key-badge {
+      display: inline-block;
+      padding: 2px 6px;
+      background: #1c222e;
+      border: 1px solid var(--border-highlight);
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 11px;
+      color: var(--accent-amber);
+      font-weight: bold;
+    }
+
+    /* 术语搜索栏 */
+    .search-box {
+      margin-bottom: 14px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-input {
+      flex: 1;
+      background: #08090c;
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 8px 14px;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-amber);
+    }
+
+    .glossary-list {
+      max-height: 280px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .glossary-item {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border-subtle);
+      padding: 10px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .glossary-left {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .glossary-en {
+      font-family: "JetBrains Mono", Consolas, monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .glossary-zh {
+      font-size: 12px;
+      color: var(--accent-amber);
+    }
+
+    .glossary-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      max-width: 55%;
+      text-align: right;
+      line-height: 1.4;
     }
 
     /* 终端控制台 */
     .terminal {
       background: var(--bg-terminal);
       border: 1px solid var(--border-subtle);
-      display: flex;
-      flex-direction: column;
-      min-height: 240px;
+      position: relative;
     }
 
     .terminal-header {
       padding: 10px 16px;
-      background: #101319;
+      background: #0e1117;
       border-bottom: 1px solid var(--border-subtle);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: "JetBrains Mono", Consolas, monospace;
-      font-size: 12px;
+      font-size: 11px;
       color: var(--text-muted);
+      font-family: "JetBrains Mono", Consolas, monospace;
     }
 
     .terminal-title {
@@ -424,28 +650,37 @@
       gap: 8px;
     }
 
-    .terminal-title span {
+    .terminal-title span:first-child {
+      display: inline-block;
       width: 6px;
       height: 6px;
       background: var(--accent-amber);
     }
 
     .terminal-body {
-      padding: 16px;
+      padding: 14px 16px;
+      height: 170px;
+      overflow-y: auto;
       font-family: "JetBrains Mono", Consolas, monospace;
       font-size: 12px;
-      color: #cbd5e1;
-      max-height: 300px;
-      overflow-y: auto;
-      white-space: pre-wrap;
-      word-break: break-all;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .terminal-body::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .terminal-body::-webkit-scrollbar-thumb {
+      background: var(--border-subtle);
     }
 
     .log-line {
       display: flex;
-      gap: 10px;
-      margin-bottom: 4px;
+      gap: 8px;
+      word-break: break-all;
     }
 
     .log-time {
@@ -586,6 +821,131 @@
       </div>
     </section>
 
+    <!-- 新手小白极速入门与设计宝典 -->
+    <section class="guide-section">
+      <div class="guide-header" onclick="toggleGuide()">
+        <div class="guide-title">
+          <span>📘 新手小白极速入门与设计宝典</span>
+          <span class="guide-badge">小白必备</span>
+        </div>
+        <span id="guide-toggle-icon" style="font-size:12px; color:var(--text-muted)">▲ 收起</span>
+      </div>
+
+      <div class="guide-nav" id="guide-nav-bar">
+        <button class="guide-tab-btn active" onclick="switchGuideTab('concepts')">💡 核心四大概念大白话</button>
+        <button class="guide-tab-btn" onclick="switchGuideTab('shortcuts')">⌨️ 新手高频快捷键表</button>
+        <button class="guide-tab-btn" onclick="switchGuideTab('glossary')">📖 常见设计术语速查词典</button>
+      </div>
+
+      <div class="guide-content" id="guide-content-area">
+        <!-- 核心四大概念 -->
+        <div class="guide-panel active" id="panel-concepts">
+          <div class="concept-grid">
+            <div class="concept-card">
+              <h4>1. 画框 (Frame) vs 编组 (Group)</h4>
+              <p>在 Figma 中，<strong>画框是容器之王</strong>！自带独立背景色、圆角、约束和自动布局；而编组只是拿绳子把几样东西捆在一起。界面设计<strong>永远优先用画框 (Frame)</strong>！</p>
+              <div class="tip">快捷键：按 F 选画框预设，或选中元素按 Ctrl+Alt+G 直接包裹进画框。</div>
+            </div>
+
+            <div class="concept-card">
+              <h4>2. 自动布局 (Auto Layout) 三剑客</h4>
+              <p>前端 Flex 布局的孪生兄弟！让按钮文字变多时背景自动被撑长。容器排版三兄弟怎么选：</p>
+              <p>• <strong>固定尺寸 (Fixed)</strong>：固定写死尺寸（如头像 40×40）。<br>
+                 • <strong>适应内容 (Hug)</strong>：根据里面的字或内容自动包裹。<br>
+                 • <strong>填满容器 (Fill)</strong>：自动撑满父级画框的全部剩余空间！</p>
+              <div class="tip">快捷键：选中元素按 Shift + A 立即启用自动布局！</div>
+            </div>
+
+            <div class="concept-card">
+              <h4>3. 组件 (Component) 与实例 (Instance)</h4>
+              <p>组件是<strong>“印章母版”</strong>，实例是用它盖出来的<strong>“印记子副本”</strong>。修改母版的颜色或圆角，成千上百个页面上的副本会自动同步改变！但各个副本可以单独修改里面的文字与配图。</p>
+              <div class="tip">快捷键：选中做好的按钮按 Ctrl + Alt + K 快速创建主组件母版。</div>
+            </div>
+
+            <div class="concept-card">
+              <h4>4. 响应式约束 (Constraints) 与蒙版</h4>
+              <p>定义外层画框被拉大拉伸时，里面的元素怎么走。比如把右上角关闭按钮设为“靠右+靠顶”，不管手机屏幕怎么变，它永远稳稳钉在右上角！蒙版 (Mask) 则像遮罩窗户，只透出下面的图层。</p>
+              <div class="tip">快捷键：选中底层形状按 Ctrl + Alt + M 将其设为上层图片的遮罩蒙版。</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 快捷键速查表 -->
+        <div class="guide-panel" id="panel-shortcuts">
+          <table class="shortcut-table">
+            <thead>
+              <tr>
+                <th>操作类型</th>
+                <th>功能说明</th>
+                <th>Windows 快捷键</th>
+                <th>小白上手建议</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>基础绘图</td>
+                <td>画框工具 (选手机/电脑尺寸)</td>
+                <td><span class="key-badge">F</span> 或 <span class="key-badge">A</span></td>
+                <td>在右侧面板直接选 iPhone 16 / Desktop 预设</td>
+              </tr>
+              <tr>
+                <td>基础绘图</td>
+                <td>矩形 / 椭圆形 / 文本工具</td>
+                <td><span class="key-badge">R</span> / <span class="key-badge">O</span> / <span class="key-badge">T</span></td>
+                <td>按住 Shift 拖动可画正方形与正圆形</td>
+              </tr>
+              <tr>
+                <td>神器排版</td>
+                <td>添加自动布局 (Auto Layout)</td>
+                <td><span class="key-badge">Shift + A</span></td>
+                <td>制作按钮、列表、弹窗的第一核心神器</td>
+              </tr>
+              <tr>
+                <td>神器排版</td>
+                <td>移除自动布局 / 整理等距</td>
+                <td><span class="key-badge">Alt + Shift + A</span> / <span class="key-badge">Ctrl+Alt+Shift+T</span></td>
+                <td>一键解决多个卡片间距错乱不齐</td>
+              </tr>
+              <tr>
+                <td>图层操作</td>
+                <td>创建组件母版 / 放入画框</td>
+                <td><span class="key-badge">Ctrl + Alt + K</span> / <span class="key-badge">Ctrl + Alt + G</span></td>
+                <td>组件可无限复用，画框是独立容器</td>
+              </tr>
+              <tr>
+                <td>图层操作</td>
+                <td>极速复制并排版副本</td>
+                <td>按住 <span class="key-badge">Alt</span> 拖动 / <span class="key-badge">Ctrl + D</span></td>
+                <td>复制一个后，按 Ctrl+D 会自动等间距连续复制</td>
+              </tr>
+              <tr>
+                <td>视图缩放</td>
+                <td>缩放至全览 / 缩放到选区</td>
+                <td><span class="key-badge">Shift + 1</span> / <span class="key-badge">Shift + 2</span></td>
+                <td>画布走丢找不到稿子时按 Shift+1 瞬间回家</td>
+              </tr>
+              <tr>
+                <td>界面控制</td>
+                <td>隐藏或显示全屏侧边栏 UI</td>
+                <td><span class="key-badge">Ctrl + \</span></td>
+                <td>给客户展示全屏沉浸大图时极度好用</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- 术语速查词典 -->
+        <div class="guide-panel" id="panel-glossary">
+          <div class="search-box">
+            <input type="text" class="search-input" id="glossary-search" placeholder="🔍 实时搜索术语 (输入英文如 hug, fill, pass through 或中文如 适应内容, 蒙版...)" oninput="filterGlossary()">
+          </div>
+          <div class="glossary-list" id="glossary-container">
+            <!-- 动态生成 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- 终端日志输出 -->
     <section class="terminal">
       <div class="terminal-header">
@@ -608,6 +968,87 @@
 
   <script>
     let logCounter = 0;
+
+    // 小白词典数据
+    const GLOSSARY_DATA = [
+      { en: "Auto layout", zh: "自动布局 (弹性自适应排版)", desc: "让卡片、按钮等元素随内容文字多少自动拉伸变长或折行，排版必备神器。" },
+      { en: "Hug contents", zh: "适应内容 (包裹子图层)", desc: "外框紧紧包裹住里面的文字或子元素，里面有多大，外框就有多大。" },
+      { en: "Fill container", zh: "填满容器 (撑满空间)", desc: "自动撑满外层父级画框的全部剩余空间，做响应式网页和自适应通栏按钮首选。" },
+      { en: "Fixed width / height", zh: "固定宽度 / 高度", desc: "写死尺寸，不管外层画框怎么变大变小，该元素的长宽永远不变。" },
+      { en: "Pass through", zh: "穿透混合 (默认混合模式)", desc: "普通默认透明度传递，不对下方图层进行变暗、变亮或滤色混合处理。" },
+      { en: "Frame vs Group", zh: "画框 vs 编组", desc: "画框自带背景、内边距、圆角与约束，是容器核心；编组仅用于简易多选打捆。" },
+      { en: "Component", zh: "主组件 (复用母版)", desc: "设计系统的基础，改动一次母版，全项目使用该组件的副本实例全部自动更新。" },
+      { en: "Instance", zh: "组件实例 (子副本)", desc: "从组件母版盖出来的子副本，可自由独立修改文本或换图，但继承母版排版样式。" },
+      { en: "Detach instance", zh: "分离实例 (解绑组件)", desc: "切断与组件母版的关联关系，将其还原为普通的普通画框或普通图层。" },
+      { en: "Tidy up", zh: "一键整理等距 (智能排列)", desc: "一键让混乱摆放的多个卡片以完全相同的横竖间距整齐排列。" },
+      { en: "Use as mask", zh: "用作蒙版 (遮罩裁切)", desc: "使用最底层的形状当作透光窗口，只展示该形状范围内的图片或上层图层。" },
+      { en: "Boolean groups", zh: "布尔运算 (形状组合)", desc: "通过两个形状的联集、减去顶层、交集、差集，组合生成复杂的自定义图形与图标。" },
+      { en: "Clip content", zh: "裁剪超出画框的内容", desc: "类似 overflow:hidden，把超出画框边界的内容自动切掉隐藏。" },
+      { en: "Constraints", zh: "响应式约束", desc: "当外层画框被拉大拉长时，规定子元素固定在左边、右边、居中还是等比缩放。" },
+      { en: "Drop shadow", zh: "外阴影 (浮起立体效果)", desc: "让卡片看起来悬浮在背景上方，形成逼真的空间景深感。" },
+      { en: "Inner shadow", zh: "内阴影 (凹陷立体效果)", desc: "让按钮看起来被按了下去，形成内嵌凹陷的质感。" },
+      { en: "Background blur", zh: "背景模糊 (毛玻璃效果)", desc: "需配合半透明背景色使用，透过该元素下方的所有内容都会被高斯模糊处理。" },
+      { en: "Layer blur", zh: "图层模糊", desc: "直接模糊当前图层本身，常用于制作弥散渐变光晕背景。" },
+      { en: "Variant", zh: "变体状态", desc: "同一个组件的不同状态（如按钮的默认、悬停、禁用态），整合在一个组件框内方便随时切换。" },
+      { en: "Smart animate", zh: "智能平滑动画", desc: "原型演示时，在两个画框之间如果图层名字相同，Figma 会自动生成平滑位移和尺寸变形补间。" }
+    ];
+
+    function renderGlossary(items) {
+      const container = document.getElementById('glossary-container');
+      if (items.length === 0) {
+        container.innerHTML = '<div style="color:var(--text-muted);font-size:12px;padding:12px;text-align:center;">未找到匹配术语，可尝试输入其他英文或中文关键词。</div>';
+        return;
+      }
+      container.innerHTML = items.map(item => `
+        <div class="glossary-item">
+          <div class="glossary-left">
+            <span class="glossary-en">${item.en}</span>
+            <span class="glossary-zh">${item.zh}</span>
+          </div>
+          <div class="glossary-desc">${item.desc}</div>
+        </div>
+      `).join('');
+    }
+
+    function filterGlossary() {
+      const q = (document.getElementById('glossary-search').value || '').trim().toLowerCase();
+      if (!q) {
+        renderGlossary(GLOSSARY_DATA);
+        return;
+      }
+      const filtered = GLOSSARY_DATA.filter(item => 
+        item.en.toLowerCase().includes(q) || 
+        item.zh.toLowerCase().includes(q) || 
+        item.desc.toLowerCase().includes(q)
+      );
+      renderGlossary(filtered);
+    }
+
+    function switchGuideTab(tabName) {
+      document.querySelectorAll('.guide-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.guide-panel').forEach(p => p.classList.remove('active'));
+      
+      event.target.classList.add('active');
+      const targetPanel = document.getElementById(`panel-${tabName}`);
+      if (targetPanel) targetPanel.classList.add('active');
+    }
+
+    let isGuideCollapsed = false;
+    function toggleGuide() {
+      const content = document.getElementById('guide-content-area');
+      const nav = document.getElementById('guide-nav-bar');
+      const icon = document.getElementById('guide-toggle-icon');
+      isGuideCollapsed = !isGuideCollapsed;
+      if (isGuideCollapsed) {
+        content.style.display = 'none';
+        nav.style.display = 'none';
+        icon.textContent = '▼ 展开';
+      } else {
+        content.style.display = 'block';
+        nav.style.display = 'flex';
+        icon.textContent = '▲ 收起';
+      }
+    }
 
     function addLog(message, type = 'info') {
       const now = new Date();
@@ -656,47 +1097,33 @@
     function setButtonsDisabled(disabled) {
       document.getElementById('btn-localize').disabled = disabled;
       document.getElementById('btn-restore').disabled = disabled;
-      document.getElementById('btn-launch').disabled = disabled;
-      document.getElementById('btn-kill').disabled = disabled;
     }
 
     async function fetchStatus(isManual = false) {
       try {
         const res = await fetch('/api/status');
-        if (!res.ok) throw new Error('HTTP ' + res.status);
         const data = await res.json();
-        
-        // 更新路径与版本
-        const pathEl = document.getElementById('val-path');
-        if (data.figma_dir) {
-          pathEl.textContent = data.figma_dir;
-          pathEl.title = data.figma_dir;
-        } else {
-          pathEl.textContent = '未检测到 Figma 安装路径';
-          pathEl.title = '';
-        }
+
+        // 路径与版本
+        document.getElementById('val-path').textContent = data.figma_dir || '未找到 Figma 安装目录';
+        document.getElementById('val-path').title = data.figma_dir || '';
         document.getElementById('val-version').textContent = data.version || '--';
 
         // 汉化状态
         const patchTag = document.getElementById('tag-patch-status');
         const systemDot = document.getElementById('system-dot');
-        const systemIndicator = document.getElementById('system-indicator');
+        const systemInd = document.getElementById('system-indicator');
 
         if (data.is_patched) {
           patchTag.className = 'tag tag-emerald';
-          patchTag.textContent = '✓ 实时汉化生效中';
+          patchTag.textContent = '已汉化生效';
           systemDot.className = 'pulse-dot';
-          systemIndicator.textContent = '实时汉化已就绪';
-        } else if (data.status === 'INSTALLED_ORIGINAL') {
+          systemInd.textContent = '实时汉化已装载';
+        } else {
           patchTag.className = 'tag tag-amber';
           patchTag.textContent = '官方英文原版';
           systemDot.className = 'pulse-dot warning';
-          systemIndicator.textContent = '待汉化就绪';
-        } else {
-          patchTag.className = 'tag tag-crimson';
-          patchTag.textContent = '路径异常 / 未安装';
-          systemDot.className = 'pulse-dot warning';
-          systemIndicator.textContent = '未就绪';
+          systemInd.textContent = '原版英文状态';
         }
 
         // 进程状态
@@ -814,8 +1241,8 @@
     // 页面加载完成后自检
     window.addEventListener('DOMContentLoaded', () => {
       addLog('Figma 汉化管理后台服务已连接 (127.0.0.1:8765)', 'info');
+      renderGlossary(GLOSSARY_DATA);
       fetchStatus();
-      // 定时轮询状态
       setInterval(fetchStatus, 4000);
     });
   </script>

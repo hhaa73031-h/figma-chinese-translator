@@ -481,7 +481,7 @@
   ],
   [
     "Absolute position",
-    "绝对定位"
+    "绝对定位 (脱离自动布局流)"
   ],
   [
     "Accelerate your next project with these wireframe templates, examples, and kits.",
@@ -529,7 +529,7 @@
   ],
   [
     "Account settings",
-    "账号设置"
+    "个人账户设置"
   ],
   [
     "Account",
@@ -965,7 +965,7 @@
   ],
   [
     "Add variant",
-    "创建变体"
+    "添加变体状态"
   ],
   [
     "Add website URL",
@@ -1105,7 +1105,7 @@
   ],
   [
     "After delay",
-    "延迟触发"
+    "延时自动触发 (无需点击)"
   ],
   [
     "After selecting points…",
@@ -1153,7 +1153,7 @@
   ],
   [
     "Align bottom",
-    "下对齐"
+    "文本底部对齐"
   ],
   [
     "Align center",
@@ -1165,11 +1165,11 @@
   ],
   [
     "Align horizontal centers",
-    "水平居中"
+    "水平居中对齐 (Alt+H)"
   ],
   [
     "Align left",
-    "左对齐"
+    "左对齐 (Alt+A)"
   ],
   [
     "Align left/right",
@@ -1177,11 +1177,11 @@
   ],
   [
     "Align middle",
-    "垂直居中"
+    "文本垂直居中对齐"
   ],
   [
     "Align right",
-    "右对齐"
+    "右对齐 (Alt+D)"
   ],
   [
     "Align text baseline",
@@ -1201,7 +1201,7 @@
   ],
   [
     "Align top",
-    "上对齐"
+    "文本顶部对齐"
   ],
   [
     "Align top/bottom",
@@ -1209,7 +1209,7 @@
   ],
   [
     "Align vertical centers",
-    "垂直居中"
+    "垂直居中对齐 (Alt+V)"
   ],
   [
     "Align",
@@ -1217,7 +1217,7 @@
   ],
   [
     "Alignment and padding",
-    "对齐和边距"
+    "对齐方式与内边距"
   ],
   [
     "Alignment is now controlled from the auto layout parent frame.",
@@ -1233,7 +1233,7 @@
   ],
   [
     "Alignment",
-    "对齐"
+    "对齐方式"
   ],
   [
     "All activity on my workspace",
@@ -1393,7 +1393,7 @@
   ],
   [
     "Alphabetical",
-    "字母顺序"
+    "按字母名称排序"
   ],
   [
     "Already have an account? Log in",
@@ -1473,7 +1473,7 @@
   ],
   [
     "Angular",
-    "角度渐变"
+    "角向渐变 (角度环形)"
   ],
   [
     "Animate matching layers",
@@ -1785,7 +1785,7 @@
   ],
   [
     "Auto height",
-    "自动高度"
+    "自动高度 (固定宽度自动折行)"
   ],
   [
     "Auto layout added",
@@ -1809,11 +1809,11 @@
   ],
   [
     "Auto layout",
-    "自动布局"
+    "自动布局 (弹性排版)"
   ],
   [
     "Auto width",
-    "自动宽度"
+    "自动宽度 (单行随字拉长)"
   ],
   [
     "Auto-start after delay",
@@ -1853,11 +1853,11 @@
   ],
   [
     "Back",
-    "后退"
+    "返回上一个页面"
   ],
   [
     "Background blur",
-    "背景模糊"
+    "背景模糊 (毛玻璃效果)"
   ],
   [
     "Background colors",
@@ -1997,7 +1997,7 @@
   ],
   [
     "Blur",
-    "模糊"
+    "模糊半径"
   ],
   [
     "boards",
@@ -2017,7 +2017,7 @@
   ],
   [
     "Boolean groups",
-    "布尔值组合"
+    "布尔运算 (组合图形)"
   ],
   [
     "Boolean operations",
@@ -2117,7 +2117,7 @@
   ],
   [
     "Bouncy",
-    "弹跳"
+    "Q弹弹跳"
   ],
   [
     "Brainstorm together",
@@ -2165,7 +2165,7 @@
   ],
   [
     "Bring forward",
-    "上移一层"
+    "上移一层 (Ctrl+[)"
   ],
   [
     "Bring in boards from Google Drive.",
@@ -2185,7 +2185,7 @@
   ],
   [
     "Bring to front",
-    "移到顶层"
+    "置于顶层 (Ctrl+])"
   ],
   [
     "Bring your work into Figma",
@@ -2325,7 +2325,7 @@
   ],
   [
     "Bulleted list",
-    "项目符号"
+    "无序列表 (圆点列表)"
   ],
   [
     "Burst",
@@ -2453,7 +2453,7 @@
   ],
   [
     "Canvas stacking",
-    "项目堆叠"
+    "图层画板堆叠次序"
   ],
   [
     "Cap height to baseline",
@@ -2461,7 +2461,7 @@
   ],
   [
     "Cap",
-    "端点"
+    "端点样式"
   ],
   [
     "Capital G with spur",
@@ -2525,7 +2525,7 @@
   ],
   [
     "Center",
-    "居中"
+    "描边居中"
   ],
   [
     "Centered",
@@ -2869,7 +2869,7 @@
   ],
   [
     "Clip content",
-    "裁剪内容"
+    "裁剪超出画框的内容"
   ],
   [
     "Clip to shape",
@@ -2889,7 +2889,7 @@
   ],
   [
     "Close overlay",
-    "关闭叠加"
+    "关闭当前浮层"
   ],
   [
     "Close Overlay",
@@ -3173,7 +3173,7 @@
   ],
   [
     "Community",
-    "社区"
+    "Figma 官方社区与素材库"
   ],
   [
     "Company name",
@@ -3209,7 +3209,7 @@
   ],
   [
     "Component configuration",
-    "组件设置"
+    "组件参数配置"
   ],
   [
     "Component details",
@@ -3233,7 +3233,7 @@
   ],
   [
     "Component",
-    "组件"
+    "组件 (可复用母版)"
   ],
   [
     "Components",
@@ -3253,7 +3253,7 @@
   ],
   [
     "Conditional",
-    "条件"
+    "添加条件分支 (if/else)"
   ],
   [
     "Confirm and pay",
@@ -3321,7 +3321,7 @@
   ],
   [
     "Constrain proportions",
-    "约束比例"
+    "锁定宽高比 (等比缩放)"
   ],
   [
     "Constraints and Resizing",
@@ -3713,7 +3713,7 @@
   ],
   [
     "Create component",
-    "创建组件"
+    "创建组件 (制作母版)"
   ],
   [
     "Create custom templates",
@@ -3881,11 +3881,11 @@
   ],
   [
     "Created by anyone",
-    "所有人创建的"
+    "由任何人创建"
   ],
   [
     "Created by others",
-    "其他人创建的"
+    "由他人创建"
   ],
   [
     "Created by you",
@@ -4033,7 +4033,7 @@
   ],
   [
     "Custom spring",
-    "自定义弹性动画"
+    "自定义物理弹簧弹性动画"
   ],
   [
     "Custom Style",
@@ -4109,7 +4109,7 @@
   ],
   [
     "Date created",
-    "创建时间"
+    "创建日期"
   ],
   [
     "Date deleted",
@@ -4517,7 +4517,7 @@
   ],
   [
     "Desktop",
-    "桌面端"
+    "桌面端常用 (1440×1024)"
   ],
   [
     "Destination",
@@ -4529,7 +4529,7 @@
   ],
   [
     "Detach instance",
-    "分离实例"
+    "分离实例 (解绑为普通图层)"
   ],
   [
     "Detach property",
@@ -4585,7 +4585,7 @@
   ],
   [
     "Device",
-    "设备"
+    "演示展示设备"
   ],
   [
     "Diagram anything",
@@ -4609,11 +4609,11 @@
   ],
   [
     "Diamond",
-    "菱形"
+    "菱形渐变"
   ],
   [
     "Difference",
-    "差集"
+    "差值"
   ],
   [
     "Dimensions",
@@ -4677,7 +4677,7 @@
   ],
   [
     "Dissolve",
-    "溶解"
+    "淡入淡出 (溶解渐变)"
   ],
   [
     "Distance",
@@ -4697,7 +4697,7 @@
   ],
   [
     "Distribute horizontal spacing",
-    "水平间距均分"
+    "水平等间距分布 (Alt+Shift+H)"
   ],
   [
     "Distribute left",
@@ -4721,7 +4721,7 @@
   ],
   [
     "Distribute vertical spacing",
-    "垂直间距均分"
+    "垂直等间距分布 (Alt+Shift+V)"
   ],
   [
     "Do Nothing",
@@ -4849,7 +4849,7 @@
   ],
   [
     "Drafts",
-    "草稿"
+    "个人草稿箱 (免费无限制)"
   ],
   [
     "Drag in Miro PDFs, Sketch files, images, and more.",
@@ -4885,7 +4885,7 @@
   ],
   [
     "Drop shadow",
-    "投影"
+    "外阴影 (浮起立体效果)"
   ],
   [
     "Drop",
@@ -5585,7 +5585,7 @@
   ],
   [
     "Exclude selection",
-    "差集所选项"
+    "差集 (排除重叠部分)"
   ],
   [
     "Exclude this page from search engine results",
@@ -6129,7 +6129,7 @@
   ],
   [
     "Fill container",
-    "填充容器"
+    "填满容器 (撑满空间)"
   ],
   [
     "Fill: ",
@@ -6253,7 +6253,7 @@
   ],
   [
     "First on top",
-    "前面在上"
+    "首个图层在最上方"
   ],
   [
     "First, select an image",
@@ -6301,7 +6301,7 @@
   ],
   [
     "Fixed size",
-    "固定大小"
+    "固定文本框尺寸"
   ],
   [
     "Fixed Width",
@@ -6313,7 +6313,7 @@
   ],
   [
     "Fixed",
-    "固定"
+    "固定尺寸"
   ],
   [
     "Flag as inappropriate...",
@@ -6325,7 +6325,7 @@
   ],
   [
     "Flatten selection",
-    "拼合所选项"
+    "拼合图层 (栅格化/转单路径)"
   ],
   [
     "Flatten visuals",
@@ -6377,7 +6377,7 @@
   ],
   [
     "Flow starting point",
-    "流程起始点"
+    "原型流程起点"
   ],
   [
     "Flow",
@@ -6465,7 +6465,7 @@
   ],
   [
     "Font size",
-    "字体大小"
+    "字号大小"
   ],
   [
     "Font",
@@ -6581,7 +6581,7 @@
   ],
   [
     "Fractions",
-    "分数"
+    "斜杠分数格式 (如 ½)"
   ],
   [
     "Frame / Group",
@@ -6593,7 +6593,7 @@
   ],
   [
     "Frame selection",
-    "添加画框"
+    "将所选放入画框 (Ctrl+Alt+G)"
   ],
   [
     "Frame tool",
@@ -6757,7 +6757,7 @@
   ],
   [
     "Gentle",
-    "轻巧"
+    "平缓柔和"
   ],
   [
     "Get a copy",
@@ -6897,7 +6897,7 @@
   ],
   [
     "Go to main component",
-    "跳转到组件母版"
+    "跳转至主组件母版"
   ],
   [
     "Go to project",
@@ -6997,7 +6997,7 @@
   ],
   [
     "Group selection",
-    "编组所选项"
+    "编组所选项 (Ctrl+G)"
   ],
   [
     "Group",
@@ -7213,7 +7213,7 @@
   ],
   [
     "Horizontal direction",
-    "水平排列"
+    "水平排列方向"
   ],
   [
     "Horizontal gap between items",
@@ -7221,7 +7221,7 @@
   ],
   [
     "Horizontal layout",
-    "水平布局"
+    "水平排列 (从左到右)"
   ],
   [
     "Horizontal Padding",
@@ -7229,7 +7229,7 @@
   ],
   [
     "Horizontal padding",
-    "水平边距"
+    "左右内边距"
   ],
   [
     "Horizontal resizing",
@@ -7269,7 +7269,7 @@
   ],
   [
     "Hug contents",
-    "适应内容"
+    "适应内容 (包裹子级)"
   ],
   [
     "Hug",
@@ -7553,7 +7553,7 @@
   ],
   [
     "Independent paddings",
-    "独立边距"
+    "独立内边距"
   ],
   [
     "Individual corners",
@@ -7569,7 +7569,7 @@
   ],
   [
     "Individual padding",
-    "独立边距"
+    "独立设置各边内边距"
   ],
   [
     "Initial Forms",
@@ -7581,7 +7581,7 @@
   ],
   [
     "Inner shadow",
-    "内阴影"
+    "内阴影 (凹陷立体效果)"
   ],
   [
     "Insert Big Image",
@@ -7605,7 +7605,7 @@
   ],
   [
     "Inside",
-    "内部"
+    "描边居内 (不占用外围空间)"
   ],
   [
     "Inspect settings",
@@ -7657,11 +7657,11 @@
   ],
   [
     "Instance",
-    "组件实例"
+    "组件实例 (子副本)"
   ],
   [
     "Instant",
-    "即时"
+    "瞬间切换 (无过渡动画)"
   ],
   [
     "Integrations",
@@ -7673,7 +7673,7 @@
   ],
   [
     "Interaction details",
-    "交互细节"
+    "交互详情面板"
   ],
   [
     "Interaction",
@@ -7681,7 +7681,7 @@
   ],
   [
     "Interactions",
-    "交互"
+    "交互事件设置"
   ],
   [
     "Interactive components",
@@ -7705,7 +7705,7 @@
   ],
   [
     "Intersect selection",
-    "交集所选项"
+    "交集 (保留重叠部分)"
   ],
   [
     "Intersect",
@@ -7869,7 +7869,7 @@
   ],
   [
     "Join",
-    "连接"
+    "转角拐角样式"
   ],
   [
     "Joined prior to tracking",
@@ -8025,7 +8025,7 @@
   ],
   [
     "Last modified",
-    "最后修改"
+    "最后修改时间"
   ],
   [
     "Last month",
@@ -8037,7 +8037,7 @@
   ],
   [
     "Last on top",
-    "后面在上"
+    "末尾图层在最上方"
   ],
   [
     "Last updated ",
@@ -8049,7 +8049,7 @@
   ],
   [
     "Last viewed",
-    "最近浏览"
+    "最后浏览时间"
   ],
   [
     "last year",
@@ -8293,7 +8293,7 @@
   ],
   [
     "Letter spacing",
-    "字距"
+    "字间距 (字符间隔)"
   ],
   [
     "Letterforms",
@@ -8349,7 +8349,7 @@
   ],
   [
     "Ligatures",
-    "连字"
+    "合字连字"
   ],
   [
     "Light bulb",
@@ -8401,11 +8401,11 @@
   ],
   [
     "Line arrow",
-    "线条箭头"
+    "直线箭头"
   ],
   [
     "Line height",
-    "行高"
+    "行高 (行间距)"
   ],
   [
     "Line shape",
@@ -8553,7 +8553,7 @@
   ],
   [
     "Lock/Unlock",
-    "锁定/解锁"
+    "锁定/解锁 (Ctrl+Shift+L)"
   ],
   [
     "Log in or create an account to collaborate",
@@ -8609,7 +8609,7 @@
   ],
   [
     "Lowercase",
-    "小写"
+    "全小写 (lowercase)"
   ],
   [
     "Luminosity",
@@ -8629,7 +8629,7 @@
   ],
   [
     "Main component",
-    "组件母版"
+    "主组件 (母版原型)"
   ],
   [
     "Main menu",
@@ -8777,7 +8777,7 @@
   ],
   [
     "Mask",
-    "蒙版"
+    "蒙版遮罩"
   ],
   [
     "Mass",
@@ -8957,7 +8957,7 @@
   ],
   [
     "Miter",
-    "斜接"
+    "尖角"
   ],
   [
     "Mixed",
@@ -9085,19 +9085,19 @@
   ],
   [
     "Mouse down",
-    "按下鼠标时"
+    "鼠标按键按下"
   ],
   [
     "Mouse enter",
-    "鼠标进入"
+    "鼠标指针移入"
   ],
   [
     "Mouse leave",
-    "鼠标离开"
+    "鼠标指针移出"
   ],
   [
     "Mouse up",
-    "释放鼠标时"
+    "鼠标按键松开"
   ],
   [
     "Move {@} files",
@@ -9137,7 +9137,7 @@
   ],
   [
     "Move in",
-    "移入"
+    "移入滑入"
   ],
   [
     "Move Left",
@@ -9145,7 +9145,7 @@
   ],
   [
     "Move out",
-    "移出"
+    "移出滑出"
   ],
   [
     "Move project {@}",
@@ -9345,7 +9345,7 @@
   ],
   [
     "Navigate to",
-    "导航到"
+    "跳转页面至"
   ],
   [
     "Navigating Figma's new UI",
@@ -9909,7 +9909,7 @@
   ],
   [
     "Numbered list",
-    "编号列表"
+    "有序列表 (数字列表)"
   ],
   [
     "Numbers",
@@ -9973,11 +9973,11 @@
   ],
   [
     "On click",
-    "单击"
+    "单击触发 (On Click)"
   ],
   [
     "On drag",
-    "拖动"
+    "拖拽触发 (On Drag)"
   ],
   [
     "On tap",
@@ -10281,7 +10281,7 @@
   ],
   [
     "Open link",
-    "打开链接"
+    "在浏览器中打开链接"
   ],
   [
     "Open Link",
@@ -10301,7 +10301,7 @@
   ],
   [
     "Open overlay",
-    "打开叠加"
+    "弹出浮层弹窗"
   ],
   [
     "Open playground",
@@ -10489,7 +10489,7 @@
   ],
   [
     "Outline stroke",
-    "轮廓化描边"
+    "轮廓化描边 (描边转填充路径)"
   ],
   [
     "Outline Text",
@@ -10509,7 +10509,7 @@
   ],
   [
     "Outside",
-    "外部"
+    "描边居外"
   ],
   [
     "Overflow behavior",
@@ -10537,11 +10537,11 @@
   ],
   [
     "Pack horizontal",
-    "水平堆叠"
+    "水平紧密对齐"
   ],
   [
     "Pack vertical",
-    "垂直堆叠"
+    "垂直紧密对齐"
   ],
   [
     "Package",
@@ -10549,7 +10549,7 @@
   ],
   [
     "Packed",
-    "堆叠"
+    "紧密排列 (元素靠拢)"
   ],
   [
     "Padding around items",
@@ -10621,7 +10621,7 @@
   ],
   [
     "Paragraph indent",
-    "段落缩进"
+    "首行缩进"
   ],
   [
     "Paragraph spacing",
@@ -10637,7 +10637,7 @@
   ],
   [
     "Pass through",
-    "穿透"
+    "穿透混合 (默认图层混合)"
   ],
   [
     "Password required",
@@ -10981,7 +10981,7 @@
   ],
   [
     "Plugin icon",
-    "插件图标"
+    "插件图标 (128×128)"
   ],
   [
     "Plugin installed",
@@ -11493,7 +11493,7 @@
   ],
   [
     "Push changes to main component",
-    "覆盖组件母版"
+    "将更改推送到主组件"
   ],
   [
     "Push overrides to main component",
@@ -11501,7 +11501,7 @@
   ],
   [
     "Push",
-    "推动"
+    "推入并挤出上一页面"
   ],
   [
     "Quality ",
@@ -11517,7 +11517,7 @@
   ],
   [
     "Quick",
-    "快速"
+    "快速敏捷"
   ],
   [
     "Quickly create a dozen (or more) assets from your spreadsheet.",
@@ -11537,7 +11537,7 @@
   ],
   [
     "Radial",
-    "径向渐变"
+    "径向渐变 (中心发散)"
   ],
   [
     "Radius",
@@ -11609,7 +11609,7 @@
   ],
   [
     "Recent files",
-    "最近的文件"
+    "最近打开的文件"
   ],
   [
     "Recent projects",
@@ -12089,11 +12089,11 @@
   ],
   [
     "Reset all changes",
-    "重置所有更改"
+    "重置全部更改"
   ],
   [
     "Reset all overrides",
-    "重置所有覆盖"
+    "重置所有实例覆盖修改"
   ],
   [
     "Reset effects",
@@ -12433,7 +12433,7 @@
   ],
   [
     "Round",
-    "圆头"
+    "圆角"
   ],
   [
     "Rounded rectangle",
@@ -12637,7 +12637,7 @@
   ],
   [
     "Scroll to",
-    "滚动到"
+    "锚点滚动到指定元素"
   ],
   [
     "Scroll with parent",
@@ -12693,7 +12693,7 @@
   ],
   [
     "Search files, teams, or people",
-    "搜索文件、团队或人员"
+    "搜索文件、团队或成员..."
   ],
   [
     "Search fonts",
@@ -13101,7 +13101,7 @@
   ],
   [
     "Send backward",
-    "下移一层"
+    "下移一层 (Ctrl+[)"
   ],
   [
     "Send Invite ",
@@ -13129,7 +13129,7 @@
   ],
   [
     "Send to back",
-    "移到底层"
+    "置于底层 (Ctrl+[)"
   ],
   [
     "Send to Figma Buzz",
@@ -13249,7 +13249,7 @@
   ],
   [
     "Set variable",
-    "设置变量"
+    "设置变量值"
   ],
   [
     "Set width to fill container",
@@ -13409,7 +13409,7 @@
   ],
   [
     "Shared files",
-    "共享的文件"
+    "共享给我的文件"
   ],
   [
     "Shared folders",
@@ -13701,7 +13701,7 @@
   ],
   [
     "Show/Hide",
-    "显示/隐藏"
+    "显示/隐藏 (Ctrl+Shift+H)"
   ],
   [
     "Showcase your best work with these professional portfolio, CV, and resume templates.",
@@ -13745,7 +13745,7 @@
   ],
   [
     "Simplify all instances",
-    "简化全部实例"
+    "精简实例面板展示"
   ],
   [
     "Simplify the handoff process with these developer-friendly tools and templates.",
@@ -13861,11 +13861,11 @@
   ],
   [
     "Slide 16:9",
-    "幻灯片 16:9"
+    "幻灯片 16:9 (1920×1080)"
   ],
   [
     "Slide 4:3",
-    "幻灯片 4:3"
+    "幻灯片 4:3 (1024×768)"
   ],
   [
     "Slide deck",
@@ -13877,11 +13877,11 @@
   ],
   [
     "Slide in",
-    "滑入"
+    "覆盖滑入"
   ],
   [
     "Slide out",
-    "滑出"
+    "滑出揭示"
   ],
   [
     "Slide transition",
@@ -13901,7 +13901,7 @@
   ],
   [
     "Slow",
-    "慢速"
+    "慢速优雅"
   ],
   [
     "Small caps",
@@ -13921,7 +13921,7 @@
   ],
   [
     "Smart animate",
-    "智能动画"
+    "智能平滑动画 (同名元素位移补间)"
   ],
   [
     "Smooth join selection",
@@ -14065,7 +14065,7 @@
   ],
   [
     "Space between",
-    "等距"
+    "两端对齐 (自动均分间距)"
   ],
   [
     "Space Grey",
@@ -14117,7 +14117,7 @@
   ],
   [
     "Spread",
-    "扩展"
+    "阴影外扩大小"
   ],
   [
     "Square (1:1)",
@@ -14241,7 +14241,7 @@
   ],
   [
     "Starting frame",
-    "起始画框"
+    "初始画框"
   ],
   [
     "Starting tasks",
@@ -14421,7 +14421,7 @@
   ],
   [
     "Stylistic alternates",
-    "替代字形"
+    "风格替代字"
   ],
   [
     "Stylistic Alternates",
@@ -14445,7 +14445,7 @@
   ],
   [
     "Subscript",
-    "下标"
+    "下标数字 (如 X₂)"
   ],
   [
     "Subscription",
@@ -14461,7 +14461,7 @@
   ],
   [
     "Subtract selection",
-    "减去顶层所选项"
+    "减去顶层 (裁剪镂空)"
   ],
   [
     "Subtract",
@@ -14509,7 +14509,7 @@
   ],
   [
     "Superscript",
-    "上标"
+    "上标数字 (如 X²)"
   ],
   [
     "Support contact",
@@ -14553,7 +14553,7 @@
   ],
   [
     "Swap instance",
-    "交换实例"
+    "切换组件实例"
   ],
   [
     "Swap Instance",
@@ -14565,7 +14565,7 @@
   ],
   [
     "Swap overlay",
-    "交换叠加"
+    "切换其他浮层"
   ],
   [
     "Swap start and end points",
@@ -15169,7 +15169,7 @@
   ],
   [
     "Tidy up",
-    "整理"
+    "一键整理等距 (智能排列)"
   ],
   [
     "TikTok",
@@ -15209,7 +15209,7 @@
   ],
   [
     "Title case",
-    "字首大写"
+    "词首大写 (Title Case)"
   ],
   [
     "Title",
@@ -15529,7 +15529,7 @@
   ],
   [
     "Trash",
-    "回收站"
+    "回收站 (30天内可恢复)"
   ],
   [
     "Trending files",
@@ -15545,7 +15545,7 @@
   ],
   [
     "Triangle arrow",
-    "三角形箭头"
+    "实心三角箭头"
   ],
   [
     "Triangle",
@@ -15729,7 +15729,7 @@
   ],
   [
     "Ungroup",
-    "取消编组"
+    "取消编组 (Ctrl+Shift+G)"
   ],
   [
     "Uninstall",
@@ -15741,7 +15741,7 @@
   ],
   [
     "Union selection",
-    "连集所选项"
+    "联集 (形状合并)"
   ],
   [
     "Union",
@@ -15949,7 +15949,7 @@
   ],
   [
     "Upgrade to Organization",
-    "升级到组织版"
+    "升级至企业组织版"
   ],
   [
     "Upgrade to organize people into user groups",
@@ -15957,7 +15957,7 @@
   ],
   [
     "Upgrade to Professional",
-    "升级到专业版"
+    "升级至专业版"
   ],
   [
     "Upgrade to the Organization plan to create branches",
@@ -16041,7 +16041,7 @@
   ],
   [
     "Uppercase",
-    "大写"
+    "全大写 (UPPERCASE)"
   ],
   [
     "US$12 per editor/month",
@@ -16061,7 +16061,7 @@
   ],
   [
     "Use as mask",
-    "设为蒙版"
+    "用作蒙版 (遮罩裁切)"
   ],
   [
     "Use auto layout",
@@ -16241,11 +16241,11 @@
   ],
   [
     "Variant",
-    "变体"
+    "变体 (多状态属性)"
   ],
   [
     "Variants",
-    "变体"
+    "组件变体集合"
   ],
   [
     "Vector networks",
@@ -16301,7 +16301,7 @@
   ],
   [
     "Vertical direction",
-    "垂直排列"
+    "垂直排列方向"
   ],
   [
     "Vertical gap between items",
@@ -16313,7 +16313,7 @@
   ],
   [
     "Vertical layout",
-    "垂直布局"
+    "垂直排列 (从上到下)"
   ],
   [
     "Vertical Padding",
@@ -16321,7 +16321,7 @@
   ],
   [
     "Vertical padding",
-    "垂直边距"
+    "上下内边距"
   ],
   [
     "Vertical resizing",
@@ -16717,7 +16717,7 @@
   ],
   [
     "While hovering",
-    "当悬停时"
+    "悬停时 (Hover 移入自动触发)"
   ],
   [
     "While inserting a component…",
@@ -16733,7 +16733,7 @@
   ],
   [
     "While pressing",
-    "当按下时"
+    "长按/按下时 (Press 保持按住)"
   ],
   [
     "While resizing…",
@@ -16837,7 +16837,7 @@
   ],
   [
     "Wireframe",
-    "线框图"
+    "线框草图 (1440×1024)"
   ],
   [
     "Wireframes",
@@ -16877,7 +16877,7 @@
   ],
   [
     "Wrap",
-    "换行"
+    "自动换行 (溢出折行)"
   ],
   [
     "Write condition",
@@ -17377,7 +17377,7 @@
   ],
   [
     "Team folder",
-    "团队文件夹"
+    "团队公共文件夹"
   ],
   [
     "Make a file",
@@ -17457,7 +17457,7 @@
   ],
   [
     "Gap between items",
-    "项目间距"
+    "元素间距"
   ],
   [
     "Hex",
@@ -17493,7 +17493,7 @@
   ],
   [
     "Key/gamepad",
-    "按键/手柄"
+    "键盘按键/手柄触发"
   ],
   [
     "Place image/video...",
@@ -17538,5 +17538,441 @@
   [
     "Open in browser",
     "在浏览器中打开"
+  ],
+  [
+    "iPhone 16 Pro Max",
+    "iPhone 16 Pro Max (440×956)"
+  ],
+  [
+    "iPhone 16 Pro",
+    "iPhone 16 Pro (402×874)"
+  ],
+  [
+    "iPhone 16 Plus",
+    "iPhone 16 Plus (430×932)"
+  ],
+  [
+    "iPhone 16",
+    "iPhone 16 (393×852)"
+  ],
+  [
+    "iPhone 15 Pro Max",
+    "iPhone 15 Pro Max (430×932)"
+  ],
+  [
+    "iPhone 15 Pro",
+    "iPhone 15 Pro (393×852)"
+  ],
+  [
+    "iPhone 15 Plus",
+    "iPhone 15 Plus (430×932)"
+  ],
+  [
+    "iPhone 15",
+    "iPhone 15 (393×852)"
+  ],
+  [
+    "iPhone 14 Pro Max",
+    "iPhone 14 Pro Max (430×932)"
+  ],
+  [
+    "iPhone 14 Pro",
+    "iPhone 14 Pro (393×852)"
+  ],
+  [
+    "iPhone 14 Plus",
+    "iPhone 14 Plus (428×926)"
+  ],
+  [
+    "iPhone 14",
+    "iPhone 14 (390×844)"
+  ],
+  [
+    "iPhone 13 / 13 Pro",
+    "iPhone 13 / 13 Pro (390×844)"
+  ],
+  [
+    "iPhone 13 mini",
+    "iPhone 13 mini (375×812)"
+  ],
+  [
+    "iPhone SE",
+    "iPhone SE (375×667)"
+  ],
+  [
+    "iPhone 8 Plus",
+    "iPhone 8 Plus (414×736)"
+  ],
+  [
+    "iPhone 8",
+    "iPhone 8 (375×667)"
+  ],
+  [
+    "Google Pixel 8 Pro",
+    "Google Pixel 8 Pro (448×996)"
+  ],
+  [
+    "Google Pixel 8",
+    "Google Pixel 8 (412×915)"
+  ],
+  [
+    "Google Pixel 7",
+    "Google Pixel 7 (412×915)"
+  ],
+  [
+    "Android Small",
+    "Android 小屏 (360×640)"
+  ],
+  [
+    "Android Large",
+    "Android 大屏 (360×800)"
+  ],
+  [
+    "Android Compact",
+    "Android 紧凑屏"
+  ],
+  [
+    "iPad mini",
+    "iPad mini (744×1133)"
+  ],
+  [
+    "iPad mini 8.3",
+    "iPad mini 8.3 (744×1133)"
+  ],
+  [
+    "iPad 10.2",
+    "iPad 10.2 (810×1080)"
+  ],
+  [
+    "iPad 10.9",
+    "iPad 10.9 (820×1180)"
+  ],
+  [
+    "iPad Air",
+    "iPad Air (820×1180)"
+  ],
+  [
+    "iPad Pro 11\"",
+    "iPad Pro 11寸 (834×1194)"
+  ],
+  [
+    "iPad Pro 11",
+    "iPad Pro 11寸 (834×1194)"
+  ],
+  [
+    "iPad Pro 12.9\"",
+    "iPad Pro 12.9寸 (1024×1366)"
+  ],
+  [
+    "iPad Pro 12.9",
+    "iPad Pro 12.9寸 (1024×1366)"
+  ],
+  [
+    "iPad Pro 13\"",
+    "iPad Pro 13寸 (1032×1376)"
+  ],
+  [
+    "Surface Pro 9",
+    "Surface Pro 9 (1440×960)"
+  ],
+  [
+    "Surface Pro 8",
+    "Surface Pro 8 (1440×960)"
+  ],
+  [
+    "Surface Pro",
+    "Surface Pro (1440×960)"
+  ],
+  [
+    "MacBook Air",
+    "MacBook Air (1280×832)"
+  ],
+  [
+    "MacBook Air 13\"",
+    "MacBook Air 13寸 (1280×832)"
+  ],
+  [
+    "MacBook Air 15\"",
+    "MacBook Air 15寸 (1440×932)"
+  ],
+  [
+    "MacBook Pro 14\"",
+    "MacBook Pro 14寸 (1512×982)"
+  ],
+  [
+    "MacBook Pro 16\"",
+    "MacBook Pro 16寸 (1728×1117)"
+  ],
+  [
+    "Desktop 1440",
+    "桌面端常用 (1440×1024)"
+  ],
+  [
+    "TV 1080p",
+    "电视 1080p (1920×1080)"
+  ],
+  [
+    "TV 4K",
+    "电视 4K (3840×2160)"
+  ],
+  [
+    "Apple Watch 45mm",
+    "Apple Watch 45毫米 (198×242)"
+  ],
+  [
+    "Apple Watch 41mm",
+    "Apple Watch 41毫米 (176×215)"
+  ],
+  [
+    "Apple Watch 44mm",
+    "Apple Watch 44毫米 (184×224)"
+  ],
+  [
+    "Apple Watch 40mm",
+    "Apple Watch 40毫米 (162×197)"
+  ],
+  [
+    "Apple Watch 49mm",
+    "Apple Watch Ultra 49毫米 (205×251)"
+  ],
+  [
+    "A4",
+    "A4 纸张 (595×842)"
+  ],
+  [
+    "A5",
+    "A5 纸张 (420×595)"
+  ],
+  [
+    "A6",
+    "A6 纸张 (297×420)"
+  ],
+  [
+    "Letter",
+    "美标信纸 Letter (612×792)"
+  ],
+  [
+    "Tabloid",
+    "报纸 Tabloid (792×1224)"
+  ],
+  [
+    "Twitter post",
+    "Twitter/X 帖子 (1200×675)"
+  ],
+  [
+    "Twitter header",
+    "Twitter/X 横幅 (1500×500)"
+  ],
+  [
+    "Facebook post",
+    "Facebook 帖子 (1200×630)"
+  ],
+  [
+    "Facebook cover",
+    "Facebook 封面 (820×312)"
+  ],
+  [
+    "Instagram post",
+    "Instagram 正方形贴文 (1080×1080)"
+  ],
+  [
+    "Instagram story",
+    "Instagram 故事 (1080×1920)"
+  ],
+  [
+    "Dribbble shot",
+    "Dribbble 作品 (1600×1200)"
+  ],
+  [
+    "Dribbble shot HD",
+    "Dribbble 高清作品 (1600×1200)"
+  ],
+  [
+    "LinkedIn cover",
+    "LinkedIn 领英封面 (1584×396)"
+  ],
+  [
+    "Component cover",
+    "组件封面 (1920×960)"
+  ],
+  [
+    "Search all plugins and widgets",
+    "搜索所有插件与小组件..."
+  ],
+  [
+    "Search plugins and widgets...",
+    "搜索插件与小组件..."
+  ],
+  [
+    "Search layers",
+    "搜索图层..."
+  ],
+  [
+    "Search layers...",
+    "搜索图层..."
+  ],
+  [
+    "Search files, teams, or people...",
+    "搜索文件、团队或成员..."
+  ],
+  [
+    "Search Google Fonts",
+    "搜索 Google 字体..."
+  ],
+  [
+    "Search all fonts",
+    "搜索全部字体..."
+  ],
+  [
+    "Find and replace",
+    "查找与替换"
+  ],
+  [
+    "Find and replace...",
+    "查找与替换..."
+  ],
+  [
+    "Search components",
+    "搜索组件..."
+  ],
+  [
+    "Search variables",
+    "搜索变量..."
+  ],
+  [
+    "Search styles",
+    "搜索样式..."
+  ],
+  [
+    "Hex color code",
+    "十六进制颜色值 (如 #FFFFFF)"
+  ],
+  [
+    "Color hex",
+    "颜色代码"
+  ],
+  [
+    "Filter by tag",
+    "按标签筛选..."
+  ],
+  [
+    "Filter by file type",
+    "按文件类型筛选..."
+  ],
+  [
+    "Type a message...",
+    "输入消息..."
+  ],
+  [
+    "Add a comment...",
+    "添加评论..."
+  ],
+  [
+    "Comment...",
+    "发表评论..."
+  ],
+  [
+    "Enter file name...",
+    "输入文件名称..."
+  ],
+  [
+    "Rename file...",
+    "重命名文件..."
+  ],
+  [
+    "No wrap",
+    "不换行"
+  ],
+  [
+    "Strokes: Included in layout",
+    "描边：计入布局尺寸 (包含边框)"
+  ],
+  [
+    "Strokes: Excluded from layout",
+    "描边：不计入布局尺寸 (独立悬浮)"
+  ],
+  [
+    "Ignore constraints",
+    "忽略缩放约束"
+  ],
+  [
+    "Expose nested instances",
+    "公开嵌套子组件实例"
+  ],
+  [
+    "Ignore mask",
+    "忽略蒙版裁切"
+  ],
+  [
+    "Boolean operation",
+    "布尔运算 (形状组合)"
+  ],
+  [
+    "Reversed triangle",
+    "反向三角箭头"
+  ],
+  [
+    "Circle arrow",
+    "圆形端点"
+  ],
+  [
+    "Diamond arrow",
+    "菱形端点"
+  ],
+  [
+    "Round cap",
+    "圆形端点"
+  ],
+  [
+    "Square cap",
+    "方形端点"
+  ],
+  [
+    "Font family",
+    "字体家族"
+  ],
+  [
+    "Font weight",
+    "字重粗细"
+  ],
+  [
+    "Align text justified",
+    "文本两端对齐"
+  ],
+  [
+    "Proportional lining",
+    "比例等高数字 (适合正文混合)"
+  ],
+  [
+    "Tabular lining",
+    "等宽等高数字 (适合表格数据对齐)"
+  ],
+  [
+    "Proportional oldstyle",
+    "古典比例数字"
+  ],
+  [
+    "Tabular oldstyle",
+    "古典等宽数字"
+  ],
+  [
+    "Discretionary ligatures",
+    "装饰性合字"
+  ],
+  [
+    "Deleted files",
+    "已删除的文件 (回收站)"
+  ],
+  [
+    "Shared with me",
+    "与我共享"
+  ],
+  [
+    "Created by me",
+    "由我创建"
+  ],
+  [
+    "Plugins and widgets",
+    "插件与微组件"
   ]
 ]
